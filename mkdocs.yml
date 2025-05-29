@@ -1,0 +1,73 @@
+site_name: My MkDocs Material Documentation
+site_url: https://sitename.example
+theme:
+    name: material
+
+    palette:
+      # Dark mode
+      - scheme: slate
+        toggle:
+          icon: material/weather-sunny
+          name: Light mode
+        primary: blue
+        accent: deep purple
+
+      # Light mode
+      - scheme: default
+        toggle:
+          icon: material/weather-night
+          name: Night mode
+        primary: green
+        accent: deep orange 
+
+    font:
+      text: Merriweather Sans
+      code: Red Hat Mono
+
+    logo: assets/Logo_ACARUS.JPG
+
+    favicon: assets/favicon_ex/favicon.ico
+
+    features:
+        - navigation.footer
+markdown_extensions:
+    # Enable emojis
+    - attr_list 
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+    # Highlight lines code
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+
+    # Content tabs
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+
+    # Admonitions (callouts)
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+
+    # Enable diagrams
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: simple/youtube
+      link: https://youtube.com/@james-willett
+    - icon: simple/github
+      link: https://fabebook.com/james-willett
+
+copyright: Copyright &copy; 2024 James Willett
